@@ -6,4 +6,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the asdads index.")
+    return render (request, 'templates/index.html')
+    # return HttpResponse("Hello, world. You're at the asdads index.")

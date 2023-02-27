@@ -10,3 +10,4 @@ admin.site.register(SkillsetModel)
 admin.site.register(ProjectModel)
 admin.site.register(MessageModel)
 
+

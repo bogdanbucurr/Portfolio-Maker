@@ -41,7 +41,7 @@ class InformationModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Information, self).save(**kwargs)
+        super(InformationModel, self).save(**kwargs)
 
     def __str__(self):
         return self.firstName
@@ -60,7 +60,7 @@ class EducationModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Education, self).save(**kwargs)
+        super(EducationModel, self).save(**kwargs)
 
     def __str__(self):
         return f"{self.user} => {self.title} from {self.institute}"
@@ -79,7 +79,7 @@ class ExperienceModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Experience, self).save(**kwargs)
+        super(EducationModel, self).save(**kwargs)
 
     def __str__(self):
         return f"{self.user} => {self.title} from {self.institute}"
@@ -98,7 +98,7 @@ class SkillsetModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Skillset, self).save(**kwargs)
+        super(SkillsetModel, self).save(**kwargs)
 
     def __str__(self):
         return f"{self.user} => {self.title}"
@@ -127,7 +127,7 @@ class ProjectModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Project, self).save(*args, **kwargs)
+        super(ProjectModel, self).save(*args, **kwargs)
 
     def slug_generate(self):
         slug = self.title.strip()
@@ -152,7 +152,7 @@ class MessageModel(models.Model):
         if kwargs.__contains__('request') and self.user is None:
             request = kwargs.pop('request')
             self.user = request.user
-        super(Message, self).save(**kwargs)
+        super(MessageModel, self).save(**kwargs)
 
     def __str__(self):
         return f"{self.user} => {self.subject}"
